@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %} 
+
+<h1> are you sure you want to delte "{{ item  }}" ? </h1>
+
+<a href="{% url 'app_todo:url_list'  %}">Cancel</a>
+
+<form method="POST">
+
+  {% csrf_token %}
+  <input type="submit" name="Confirm">
+  
+</form>
+
+{% endblock %} 
